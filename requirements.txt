@@ -1,1 +1,4 @@
 fastapi[all]
+supabase
+python-dotenv
+outscraper
