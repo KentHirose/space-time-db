@@ -26,14 +26,8 @@ async def root():
 
 
 @app.get("/map")
-async def get_directions(origin="松戸駅", destination="渋谷駅", time="2024/8/1/10:00:00"):
-    # 以下のダミーのデータを返す
-    # 松戸駅から日暮里駅に手段=常磐線で行く(2024/8/1/10:00:00発、2024/8/1/10:30:00到着)
-    # 日暮里駅常磐線ホームから山手線ホームに手段=乗り換え(2024/8/1/10:30:00発、2024/8/1/10:40:00到着)
-    # 日暮里駅から渋谷駅まで手段=山手線で行く(2024/8/1/10:40:00発、2024/8/1/11:00:00到着)
-    
+async def get_directions(origin="松戸駅", destination="渋谷駅", time="2024/8/1/11:00:00"):
     return [
-        [
             {
                 "origin": "松戸駅",
                 "destination": "日暮里駅",
@@ -55,5 +49,4 @@ async def get_directions(origin="松戸駅", destination="渋谷駅", time="2024
             "departure": "2024/8/1/10:40:00",
             "arrival": "2024/8/1/11:00:00",
             }
-        ]
     ]
