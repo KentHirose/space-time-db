@@ -59,3 +59,12 @@ async def get_directions(origin="松戸駅", destination="渋谷駅", time="2024
             "arrival": "2024/8/1/11:00:00",
             }
     ]
+    
+@app.post("/route")
+async def get_route(origin: str, destination: str, name: str):
+    supabase.table("route").insert({
+      "origin": origin,
+      "destination": destination,
+      "name": name,
+    }).execute()
+    return "ok"
